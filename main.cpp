@@ -1,8 +1,30 @@
 #include <iostream>
 #include "HashMap.h"
 
+
+void test1() {
+    Arr* newArray = new Arr;
+    newArray->size = 0;
+    newArray->arr = nullptr;
+
+    std::cout << "The contents of your array, currently, are: [";
+    printArray(newArray);
+    std::cout << "]." << std::endl;
+    std::cout << "The first repeated character is: " << firstRecurringNumber(newArray->arr, newArray->size) << "." << std::endl << std::endl;
+
+    generateArray(newArray);
+
+    std::cout << "The contents of your randomly generated array are: [";
+    printArray(newArray);
+    std::cout << "]." << std::endl;
+    std::cout << "The first repeated character is: " << firstRecurringNumber(newArray->arr, newArray->size) << "." << std::endl << std::endl;
+
+    free(newArray->arr);
+    delete(newArray);
+}
+
 int main() {
-    int arr[] = {2,1,1,2,3,5,1,2,4};
-    std::cout << firstRecurringNumber(arr, 9) << std::endl;
+    test1();
+
     return 0;
 }
