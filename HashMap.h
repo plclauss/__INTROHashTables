@@ -14,6 +14,7 @@ typedef struct {
 // custom functions
 int firstRecurringNumber(int* arr, int arrSize);
 void generateArray(Arr* container);
+void generateOrderedArray(Arr* container);
 void printArray(const Arr* container);
 
 #endif //ZTMHASHTABLES_HASHMAP_H

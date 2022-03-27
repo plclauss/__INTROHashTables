@@ -9,9 +9,18 @@
 #include "HashMap.h"
 
 void printArray(const Arr* container) {
+    for (int i = 0; i < container->size; i++) {
+        std::cout << container->arr[i];
+        (i == container->size - 1) ? std::cout << "" : std::cout << ", ";
+    }
+}
+
+void generateOrderedArray(Arr* container) {
+    container->size = 10;
+    container->arr = (int*)realloc(container->arr, sizeof(int) * container->size);
+
     for (int i = 0; i < container->size; i++)
-        std::cout << container->arr[i] << ", ";
-    std::cout << std::endl;
+        container->arr[i] = i;
 }
 
 void generateArray(Arr* container) {

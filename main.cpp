@@ -12,6 +12,12 @@ void test1() {
     std::cout << "]." << std::endl;
     std::cout << "The first repeated character is: " << firstRecurringNumber(newArray->arr, newArray->size) << "." << std::endl << std::endl;
 
+    std::cout << "The contents of your ordered, unique-numbered array are: [";
+    generateOrderedArray(newArray);
+    printArray(newArray);
+    std::cout << "]." << std::endl;
+    std::cout << "The first repeated character is: " << firstRecurringNumber(newArray->arr, newArray->size) << "." << std::endl << std::endl;
+
     generateArray(newArray);
 
     std::cout << "The contents of your randomly generated array are: [";
